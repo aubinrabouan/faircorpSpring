@@ -1,6 +1,9 @@
-package com.emse.spring.faircorp.model;
+package com.emse.spring.faircorp.model.light;
 
 
+
+import com.emse.spring.faircorp.model.room.Room;
+import com.emse.spring.faircorp.model.Status;
 
 import javax.persistence.*;
 
@@ -20,6 +23,7 @@ public class Light {
 
     @ManyToOne(optional = false)
     private Room room;
+
 
 
     public Light(){

@@ -1,5 +1,7 @@
-package com.emse.spring.faircorp.model;
+package com.emse.spring.faircorp.model.light;
 
+
+import com.emse.spring.faircorp.model.Status;
 
 public class LightDto {
 

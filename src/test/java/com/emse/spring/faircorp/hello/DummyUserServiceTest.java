@@ -1,5 +1,6 @@
 package com.emse.spring.faircorp.hello;
 
+import com.emse.spring.faircorp.hello.service.DummyUserService;
 import org.hamcrest.Matchers;
 import org.junit.Rule;
 import org.junit.Test;

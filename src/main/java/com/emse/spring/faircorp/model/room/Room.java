@@ -1,9 +1,10 @@
-package com.emse.spring.faircorp.model;
+package com.emse.spring.faircorp.model.room;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.emse.spring.faircorp.model.building.Building;
+import com.emse.spring.faircorp.model.light.Light;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Room {
@@ -19,6 +20,11 @@ public class Room {
     private Integer floor;
 
 
+    @ManyToOne(optional = false)
+    private Building building;
+
+    @OneToMany(mappedBy = "room")
+    private List<Light> lights;
 
     public Room(){
 
@@ -46,6 +52,17 @@ public class Room {
     }
     public void setFloor(Integer floor){
         this.floor = floor;
+    }
+    public List<Light> getLights() {
+        return lights;
+    }
+
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
     }
 
 }

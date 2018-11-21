@@ -1,4 +1,4 @@
-package com.emse.spring.faircorp.hello;
+package com.emse.spring.faircorp.hello.controller;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;

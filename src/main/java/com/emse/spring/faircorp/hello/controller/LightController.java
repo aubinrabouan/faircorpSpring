@@ -1,6 +1,10 @@
-package com.emse.spring.faircorp.hello;
+package com.emse.spring.faircorp.hello.controller;
 
 import com.emse.spring.faircorp.model.*;
+import com.emse.spring.faircorp.model.light.Light;
+import com.emse.spring.faircorp.model.light.dao.LightDao;
+import com.emse.spring.faircorp.model.light.LightDto;
+import com.emse.spring.faircorp.model.room.dao.RoomDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
