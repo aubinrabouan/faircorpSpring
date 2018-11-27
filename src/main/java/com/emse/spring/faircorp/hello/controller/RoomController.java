@@ -13,7 +13,9 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @RestController
+@CrossOrigin(origins = { "http://localhost:63342" }, maxAge = 3600)
 @RequestMapping("/api/rooms")
 @Transactional
 public class RoomController {

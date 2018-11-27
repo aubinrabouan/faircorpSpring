@@ -1,8 +1,96 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title> Spring in practice</title>
+    <meta charset="utf-8">
+
+    <title>Faircorp Aubin</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
+
 <body>
-Hello world
+<!-- Voici notre en‑tête principale utilisée dans toutes les pages
+     de notre site web -->
+
+<header>
+    <h1>Faircorp Aubin RABOUAN</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">L'équipe</a></li>
+        <li><a href="#">Projets</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Un formulaire de recherche est une autre façon de naviguer de
+         façon non‑linéaire dans un site. -->
+</nav>
+
+<!-- Ici nous mettons le contenu de la page -->
+<main>
+
+    <!-- Il contient un article -->
+    <article>
+        <h2>CHOOSE YOUR BUILDING</h2>
+
+        <FORM>
+            <SELECT name="nom" size="1">
+                <OPTION>lundi</OPTION>
+                <OPTION>mardi</OPTION>
+                <OPTION selected>mercredi</OPTION>
+                <OPTION>jeudi</OPTION>
+                <OPTION>vendredi</OPTION>
+            </SELECT>
+        </FORM>
+
+        <div id = "rooms"></div>
+
+        <h3>Liste LIghts</h3>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Level</th>
+                <th>Room</th>
+                <th>Building</th>
+                <th>Switch</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>ON</td>
+                <td>121</td>
+                <td>TEST</td>
+                <td>HQ</td>
+                <td><button type="button">Switch</button></td>
+            </tr>
+        </table>
+
+
+    </article>
+
+    <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
+         principal -->
+    <aside>
+        <h2>See also</h2>
+
+        <ul>
+            <li><a href="#">Eh bien…</a></li>
+        </ul>
+    </aside>
+
+</main>
+
+<!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+
+<footer>
+    <p>©Copyright Pixlel Ltd. Tous droits reversés.</p>
+</footer>
+<script src = "dom_api.js"></script>
 </body>
 </html>

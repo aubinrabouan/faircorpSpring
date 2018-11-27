@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@SuppressWarnings("ALL")
+
 @RestController  // (1)
+@CrossOrigin
 @RequestMapping("/api/lights") // (2)
 @Transactional // (3)
 public class LightController {
