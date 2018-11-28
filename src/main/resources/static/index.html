@@ -6,7 +6,7 @@
     <title>Faircorp Aubin</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 
@@ -35,42 +35,49 @@
 
     <!-- Il contient un article -->
     <article>
+        <input type="button" value="test" onclick="teste()">
         <h2>CHOOSE YOUR BUILDING</h2>
 
-        <FORM>
-            <SELECT name="nom" size="1">
-                <OPTION>lundi</OPTION>
-                <OPTION>mardi</OPTION>
-                <OPTION selected>mercredi</OPTION>
-                <OPTION>jeudi</OPTION>
-                <OPTION>vendredi</OPTION>
+        <FORM class = "test">
+            <SELECT name="nom" size="1" id="buildings" onchange="roomselection(this.value)">
+            <OPTION>Choose your Building</OPTION>
             </SELECT>
         </FORM>
 
-        <div id = "rooms"></div>
+        <h2>CHOOSE YOUR ROOM</h2>
 
-        <h3>Liste LIghts</h3>
+        <FORM class="test">
+            <SELECT name="nom" size="1" id="rooms" onchange="lights(this.value)">
+                <OPTION>Choose your Room</OPTION>
+            </SELECT>
+        </FORM>
 
-        <table>
+        <h3>Liste Lights</h3>
+
+        <table id="lights">
             <tr>
                 <th>ID</th>
                 <th>Status</th>
                 <th>Level</th>
-                <th>Room</th>
-                <th>Building</th>
                 <th>Switch</th>
+                <th>Delete</th>
+
             </tr>
 
-            <tr>
-                <td>1</td>
-                <td>ON</td>
-                <td>121</td>
-                <td>TEST</td>
-                <td>HQ</td>
-                <td><button type="button">Switch</button></td>
-            </tr>
         </table>
 
+        <h4>Create new light</h4>
+        <div>
+            <FORM >
+                <SELECT name="new" size="1" id="newlight" value="Satus" class="small">
+                    <OPTION>ON</OPTION>
+                    <OPTION>OFF</OPTION>
+                </SELECT>
+                <input type="number" id="levelnew" value="30" min="0" max="255"></div><br/>
+                <input type="button" value="create" onclick="createlight()">
+            </FORM>
+
+        </div>
 
     </article>
 
