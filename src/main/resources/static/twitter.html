@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li><a href="http://twitter.com/hputtick" id="twitflw"></a></li>
+</ul>
+<script>
+    function()
+    {
+        // Get Number of Twitter Followers From Twitter.com
+        twitterusername = 'hputtick';
+        $.getJSON('http://twitter.com/users/'+twitterusername+'.json?callback=?',
+            function(data)
+            {
+                $('#twitflw').html('Twitter Followers : ' + data.followers_count + '');
+                console.log(data.followers_count);
+            });
+    })</script>
+</body>
+
+</html>

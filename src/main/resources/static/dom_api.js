@@ -161,9 +161,6 @@ function createlight(){
         }, true);
 }
 
-function teste(){
-    console.log(document.getElementById('rooms').value);
-}
 
 function ajaxPost(url, data, callback, isJson) {
     var req = new XMLHttpRequest();
