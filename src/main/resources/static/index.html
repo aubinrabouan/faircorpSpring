@@ -20,10 +20,10 @@
 
 <nav>
     <ul>
-        <li><a href="twitter.html">Accueil</a></li>
-        <li><a href="twitter.html">L'équipe</a></li>
-        <li><a href="twitter.html">Projets</a></li>
-        <li><a href="twitter.html">Contact</a></li>
+        <li><a href="https://twitter.com/MinBot42">Accueil</a></li>
+        <li><a href="https://twitter.com/MinBot42">L'équipe</a></li>
+        <li><a href="https://www.minbot.fr/index.php/fr/">Projets</a></li>
+        <li><a href="https://www.minbot.fr/index.php/fr/">Contact</a></li>
     </ul>
 
     <!-- Un formulaire de recherche est une autre façon de naviguer de
@@ -35,50 +35,60 @@
 
     <!-- Il contient un article -->
     <article>
-        <input type="button" value="test">
         <h2>CHOOSE YOUR BUILDING</h2>
 
-        <FORM class = "test">
-            <SELECT name="nom" size="1" id="buildings" onchange="roomselection(this.value)">
-            <OPTION>Choose your Building</OPTION>
-            </SELECT>
-        </FORM>
-
-        <h2>CHOOSE YOUR ROOM</h2>
-
-        <FORM class="test">
-            <SELECT name="nom" size="1" id="rooms" onchange="lights(this.value)">
-                <OPTION>Choose your Room</OPTION>
-            </SELECT>
-        </FORM>
-
-        <h3>Liste Lights</h3>
-
-        <table id="lights">
-            <tr>
-                <th>ID</th>
-                <th>Status</th>
-                <th>Level</th>
-                <th>Switch</th>
-                <th>Delete</th>
-
-            </tr>
-
-        </table>
-
-        <h4>Create new light</h4>
-        <div>
-            <FORM >
-                <SELECT name="new" size="1" id="newlight" value="Satus" class="small">
-                    <OPTION>ON</OPTION>
-                    <OPTION>OFF</OPTION>
+        <div class = "buildingbloc" id="divbuilding">
+            <FORM class = "test">
+                <SELECT name="nom" size="1" id="buildings" onchange="roomselection(this.value)">
+                    <OPTION>Choose your Building</OPTION>
                 </SELECT>
-                <input type="number" id="levelnew" value="30" min="0" max="255"></div><br/>
-                <input type="button" value="create" onclick="createlight()">
             </FORM>
 
+
+            <input type="button" value="Create a new one" class = "buildingnew" onclick="createbuilding()">
+            <input type="button" value="Delete" class = "buildingnew hidden" id="deletebuilding">
         </div>
 
+
+        <h2>CHOOSE YOUR ROOM</h2>
+        <div class="buildingbloc hidden" id="divroom">
+            <FORM class="test">
+                <SELECT name="nom" size="1" id="rooms" onchange="lights(this.value)">
+                    <OPTION>Choose your Room</OPTION>
+                </SELECT>
+            </FORM>
+
+            <input type="button" value="Create a new one" class = "buildingnew" onclick="createbuilding()">
+            <input type="button" value="Delete" class = "buildingnew">
+
+        </div>
+        <h2>MODIFY YOUR LIGHTS</h2>
+        <div class="hidden" id="divlights">
+            <table id="lights">
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Level</th>
+                    <th>Switch</th>
+                    <th>Delete</th>
+
+                </tr>
+
+            </table>
+
+            <h3>Create new light</h3>
+            <div class="newlight">
+                <FORM >
+                    <SELECT name="new" size="1" id="newlight" value="Status" class="small">
+                        <OPTION>ON</OPTION>
+                        <OPTION>OFF</OPTION>
+                    </SELECT>
+                    <input type="number" id="levelnew" value="30" min="0" max="255">
+                    <input type="button" value="create" onclick="createlight()">
+                </FORM>
+
+            </div>
+        </div>
     </article>
 
     <!-- Le contenu « à côté » peut aussi être intégré dans le contenu

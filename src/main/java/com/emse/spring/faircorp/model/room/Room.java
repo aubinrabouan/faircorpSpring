@@ -35,6 +35,13 @@ public class Room {
         this.floor  = floor;
     }
 
+    public Room(String name, Integer floor, Building building){
+        this.name   = name;
+        this.floor  = floor;
+        this.building = building;
+    }
+
+
     public Long getId(){
         return this.id;
     }

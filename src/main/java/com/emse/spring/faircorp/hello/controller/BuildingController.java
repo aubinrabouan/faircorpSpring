@@ -45,6 +45,7 @@ public class BuildingController {
 
     @PostMapping
     public BuildingDto create(@RequestBody BuildingDto dto){
+
         Building building = null;
         if (dto.getId() != null){
             building = buildingDao.findById(dto.getId()).orElse(null);

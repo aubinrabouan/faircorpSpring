@@ -1,6 +1,7 @@
 package com.emse.spring.faircorp.hello.controller;
 
 import com.emse.spring.faircorp.model.Status;
+import com.emse.spring.faircorp.model.building.dao.BuildingDao;
 import com.emse.spring.faircorp.model.light.Light;
 import com.emse.spring.faircorp.model.light.dao.LightDao;
 import com.emse.spring.faircorp.model.room.Room;
@@ -25,6 +26,8 @@ public class RoomController {
     private LightDao lightDao;
     @Autowired
     private RoomDao roomDao;
+    @Autowired
+    private BuildingDao buildingDao;
 
     @GetMapping
     public List<RoomDto> findAll() {
@@ -56,7 +59,7 @@ public class RoomController {
         }
 
         if (room == null) {
-            room = roomDao.save(new Room(dto.getName(), dto.getFloor()));
+            room = roomDao.save(new Room(dto.getName(), dto.getFloor(), buildingDao.getOne(dto.getBuildingId())));
         }
 
         return new RoomDto(room);

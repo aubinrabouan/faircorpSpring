@@ -16,6 +16,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 form.test
 {
     text-align: center;
+    display: inline;
 }
 
 
@@ -45,7 +46,7 @@ header
 
 
 nav {
-    padding: 0; margin: 20;
+    padding: 5px;
 }
 li  {
     display: inline;
@@ -56,4 +57,20 @@ ul{
 }
 
 
+div.buildingbloc{
+
+    text-align: center;
+}
+
+div.hidden{
+    visibility: hidden;
+}
+
+input.hidden{
+    visibility: hidden;
+}
+
+div.newlight{
+
+}
 
